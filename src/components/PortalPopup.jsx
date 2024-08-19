@@ -55,7 +55,6 @@ const PortalPopup = ({
           break;
         case "At Filter":
           style.position = "absolute";
-
           style.top = "205px";
           style.left = "1780px";
           break;
@@ -94,6 +93,11 @@ const PortalPopup = ({
         case "Bottom right":
           style.top = relativeY + relativeH + bottom;
           style.left = relativeX + relativeW - containerW - right;
+          break;
+        case "At Filter":
+          style.position = "absolute";
+          style.top = "205px";
+          style.left = "1780px";
           break;
       }
 
@@ -171,6 +175,7 @@ PortalPopup.propTypes = {
     "Bottom left",
     "Bottom center",
     "Bottom right",
+    "At Filter",
   ]),
   onOutsideClick: PropTypes.func,
   zIndex: PropTypes.number,
