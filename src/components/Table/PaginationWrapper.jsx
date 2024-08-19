@@ -105,6 +105,18 @@ const PaginationWrapper = ({
                   src="/vector.svg"
                   onClick={handleFilterPopup}
                 />
+                {hidden && (
+                  <div className="absolute top-[15px] right-[165px]">
+                    <PortalPopup
+                      overlayColor="rgba(113, 113, 113, 0.3)"
+                      onOutsideClick={handleFilterPopup}
+                      placement="Centered"
+                    >
+                      {" "}
+                      <Filter onClose={handleFilterPopup} />
+                    </PortalPopup>
+                  </div>
+                )}
               </div>
 
               <button
@@ -136,19 +148,6 @@ const PaginationWrapper = ({
         >
           <Edit onClose={closeEdit} />
         </PortalPopup>
-      )}
-
-      {hidden && (
-        <div>
-          <PortalPopup
-            overlayColor=""
-            placement="At Filter"
-            onOutsideClick={handleFilterPopup}
-          >
-            {" "}
-            <Filter onClose={handleFilterPopup} />
-          </PortalPopup>
-        </div>
       )}
     </>
   );

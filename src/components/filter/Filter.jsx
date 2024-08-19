@@ -72,7 +72,7 @@ const Filter = memo(({ className = "", onClose }) => {
         <img
           className="w-4 h-4 cursor-pointer"
           alt="Close"
-          src="/public/down-arrow.png"
+          src="/down-arrow.png"
           onClick={onClose}
         />
       </div>
@@ -92,7 +92,7 @@ const Filter = memo(({ className = "", onClose }) => {
             className={`h-4 w-4 transform transition-transform ${
               roleHidden ? "rotate-180" : ""
             }`}
-            src="/public/down-arrow.png"
+            src="/down-arrow.png"
             alt="Toggle"
           />
         </div>
@@ -140,7 +140,7 @@ const Filter = memo(({ className = "", onClose }) => {
             className={`h-4 w-4 transform transition-transform ${
               teamHidden ? "rotate-180" : ""
             }`}
-            src="../../../public/down-arrow.png"
+            src="/down-arrow.png"
             alt="Toggle"
           />
         </div>
