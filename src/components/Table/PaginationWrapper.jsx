@@ -2,9 +2,9 @@ import { useState, useMemo, useCallback } from "react";
 import Edit from "../Edit";
 import PortalPopup from "../PortalPopup";
 import PropTypes from "prop-types";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setSearchQuery } from "../../Slices/DataSlices";
-import Filter from "../filter/filter";
+import Filter from "../filter/Filter";
 
 const PaginationWrapper = ({
   className = "",
