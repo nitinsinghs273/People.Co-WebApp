@@ -26,7 +26,7 @@ const EmailInput = ({ name, email, setName, setEmail, className = "" }) => {
                   <img
                     className="h-6 w-6 relative hidden"
                     alt=""
-                    src="../../../public/placeholder.svg"
+                    src="/placeholder.svg"
                   />
                   <div className="relative leading-[125%] whitespace-nowrap">
                     <input
@@ -44,7 +44,7 @@ const EmailInput = ({ name, email, setName, setEmail, className = "" }) => {
               <img
                 className="w-6 h-6 relative overflow-hidden shrink-0 hidden z-[4]"
                 alt=""
-                src="../../../public/icon-end-1-medium.svg"
+                src="/icon-end-1-medium.svg"
               />
             </div>
           </div>

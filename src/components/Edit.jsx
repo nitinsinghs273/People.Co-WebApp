@@ -79,9 +79,7 @@ const Edit = ({ className = "", onClose, user }) => {
             <div
               className="h-[100px] w-[100px] rounded-181xl flex flex-row items-start justify-start bg-cover bg-no-repeat bg-[top]"
               style={{
-                backgroundImage: `url(${
-                  photo || "../../../public/default-avatar.png"
-                })`,
+                backgroundImage: `url(${photo || "/default-avatar.png"})`,
               }}
             />
           </div>
@@ -100,7 +98,7 @@ const Edit = ({ className = "", onClose, user }) => {
                     <img
                       className="h-5 w-5 relative overflow-hidden shrink-0 min-h-[20px]"
                       alt=""
-                      src="../../../public/icons--lucide1.svg"
+                      src="/icons--lucide1.svg"
                     />
                     <div className="flex flex-row items-center justify-center">
                       <b className="relative text-sm tracking-[0.08em] leading-[120%] uppercase inline-block font-text-sm-semibold text-accent-accent-700 text-left min-w-[128px]">
@@ -120,7 +118,7 @@ const Edit = ({ className = "", onClose, user }) => {
                     <img
                       className="h-5 w-5 relative overflow-hidden shrink-0 min-h-[20px]"
                       alt=""
-                      src="../../../public/icons--lucide-1.svg"
+                      src="/icons--lucide-1.svg"
                     />
                     <div className="flex flex-row items-center justify-center">
                       <b className="relative text-sm tracking-[0.08em] leading-[120%] uppercase inline-block font-text-sm-semibold text-accent-accent-700 text-left min-w-[127px]">

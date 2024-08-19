@@ -95,7 +95,7 @@ const Component = memo(({ className = "", userByID }) => {
                           <img
                             className="h-5 w-5 relative overflow-hidden shrink-0 min-h-[20px]"
                             alt=""
-                            src="/public/icon-1.svg"
+                            src="/icon-1.svg"
                           />
                           <div className="flex flex-row items-center justify-center">
                             <b className="relative text-sm tracking-[0.08em] leading-[120%] uppercase font-ubuntu text-primary text-left">

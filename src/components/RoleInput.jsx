@@ -27,7 +27,7 @@ const RoleInput = ({ className = "" }) => {
                   <img
                     className="h-6 w-6 relative"
                     alt=""
-                    src="../../../public/placeholder.svg"
+                    src="/placeholder.svg"
                   />
                 )}
                 <div className="relative leading-[125%] inline-block min-w-[48px]">
@@ -38,7 +38,7 @@ const RoleInput = ({ className = "" }) => {
                 <img
                   className="absolute top-[12px] left-[282px] w-6 h-6 overflow-hidden z-[1]"
                   alt=""
-                  src="../../../public/icon-end-1-medium.svg"
+                  src="/icon-end-1-medium.svg"
                 />
               )}
             </div>
@@ -60,7 +60,7 @@ const RoleInput = ({ className = "" }) => {
                   <img
                     className="h-6 w-6 relative"
                     alt=""
-                    src="../../../public/placeholder.svg"
+                    src="/placeholder.svg"
                   />
                 )}
                 <div className="relative leading-[125%] inline-block min-w-[48px]">
@@ -71,7 +71,7 @@ const RoleInput = ({ className = "" }) => {
                 <img
                   className="absolute top-[12px] left-[282px] w-6 h-6 overflow-hidden z-[1]"
                   alt=""
-                  src="../../../public/icon-end-1-medium.svg"
+                  src="/icon-end-1-medium.svg"
                 />
               )}
             </div>

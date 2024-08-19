@@ -58,7 +58,7 @@ const UserPanel = memo(({ className = "", userByID }) => {
             className="h-6 w-6 relative overflow-hidden shrink-0 cursor-pointer z-[1]"
             loading="lazy"
             alt="Icons Lucide"
-            src="/public/icons--lucide.svg" // Updated to directly reference the public folder
+            src="/icons--lucide.svg" // Updated to directly reference the public folder
 
             // Fallback icon
           />

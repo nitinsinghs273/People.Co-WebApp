@@ -40,11 +40,7 @@ export default function Sidebar1({ ...props }) {
                   <img
                     className="h-6 w-6 relative rounded overflow-hidden shrink-0"
                     alt=""
-                    src={
-                      isActive
-                        ? "/public/frame-513-1.svg"
-                        : "/public/frame-513.svg"
-                    }
+                    src={isActive ? "/frame-513-1.svg" : "/frame-513.svg"}
                   />
                   <div className="relative leading-[125%] font-semibold inline-block min-w-[74px]">
                     Overview
@@ -65,11 +61,7 @@ export default function Sidebar1({ ...props }) {
                   <img
                     className="h-6 w-6 relative rounded overflow-hidden shrink-0"
                     alt=""
-                    src={
-                      isActive
-                        ? "/public/frame-513-1.svg"
-                        : "/public/frame-513.svg"
-                    }
+                    src={isActive ? "/frame-513-1.svg" : "/frame-513.svg"}
                   />
                   <div className="relative leading-[125%] font-semibold inline-block min-w-[74px] ">
                     People Directory

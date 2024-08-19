@@ -64,7 +64,7 @@ const PaginationWrapper = ({
               <img
                 className="w-5 h-5 relative overflow-hidden shrink-0"
                 alt=""
-                src="/public/dotsvertical.svg"
+                src="/dotsvertical.svg"
               />
             </div>
           </div>
@@ -84,7 +84,7 @@ const PaginationWrapper = ({
                     <img
                       className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px] z-[1]"
                       alt=""
-                      src="/public/search.svg"
+                      src="/search.svg"
                     />
                   </div>
                 </div>
@@ -96,7 +96,7 @@ const PaginationWrapper = ({
                   className="w-5 h-[18px] relative"
                   loading="lazy"
                   alt=""
-                  src="/public/vector.svg"
+                  src="/vector.svg"
                   onClick={handleFilterPopup}
                 />
               </div>
@@ -109,7 +109,7 @@ const PaginationWrapper = ({
                   <img
                     className="h-5 w-5 relative min-h-[20px]"
                     alt=""
-                    src="/public/icon.svg"
+                    src="/icon.svg"
                   />
                   <div className="flex flex-row items-center justify-center">
                     <a className="relative text-sm tracking-[0.08em] leading-[120%] uppercase inline-block font-text-sm-semibold text-base-white text-left min-w-[107px]">
