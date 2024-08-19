@@ -57,7 +57,7 @@ const PortalPopup = ({
           style.position = "absolute";
 
           style.top = "205px";
-          style.left = "2065px";
+          style.left = "1780px";
           break;
       }
     }

@@ -20,7 +20,11 @@ function UserTable() {
       <div className="" style={{ width: "95%" }}>
         <UserTableHeader />
         {filteredUsers.map((item) => (
-          <UserTableCell key={item.id} data={item} />
+          <UserTableCell
+            key={item.id}
+            data={item}
+            propBackgroundColor={item.id % 2 == 0 ? "#f9fafb" : ""}
+          />
         ))}
       </div>
       <Pagination />

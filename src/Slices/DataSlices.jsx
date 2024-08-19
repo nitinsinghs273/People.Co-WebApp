@@ -38,14 +38,16 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "AI and User Experience: The Future of Design",
-        publication: "Published in the Journal of Modern Design • 2022",
+        publication: "Published in the Journal of Modern Design ",
+        year: 2023,
         about:
           "This research explores how artificial intelligence can enhance user experience in modern design practices, focusing on human-centered approaches.",
       },
       {
         title:
           "AI, IoT Based Real-Time Condition Monitoring of Electrical Machines Using Python",
-        publication: "Published in Industrial Engineering Journal • 2021",
+        publication: "Published in Industrial Engineering Journal ",
+        year: 2021,
         about:
           "This paper delves into how AI and IoT technologies can be applied to real-time condition monitoring of electrical machines to prevent failures in small businesses.",
       },
@@ -67,7 +69,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Designing for Accessibility: A Human-Centered Approach",
-        publication: "Published in UX Design Weekly • 2021",
+        publication: "Published in UX Design Weekly ",
+        year: 2021,
         about:
           "This study focuses on designing accessible interfaces that cater to users with disabilities, emphasizing inclusive and human-centered design principles.",
       },
@@ -89,7 +92,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Effective Product Management Strategies in Tech",
-        publication: "Published in Product Management Journal • 2023",
+        publication: "Published in Product Management Journal ",
+        year: 2023,
         about:
           "The research outlines strategies for effective product management in the tech industry, focusing on agile practices and cross-functional collaboration.",
       },
@@ -111,7 +115,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Data Analysis Techniques for Business",
-        publication: "Published in Data Science Review • 2021",
+        publication: "Published in Data Science Review",
+        year: 2021,
         about:
           "This research discusses key data analysis techniques that businesses can implement to enhance decision-making and improve operational efficiency.",
       },
@@ -133,7 +138,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Marketing in the Digital Age",
-        publication: "Published in Marketing Insights • 2020",
+        publication: "Published in Marketing Insights",
+        year: 2020,
         about:
           "The paper explores the shift in marketing strategies due to digital transformation, focusing on data-driven approaches and personalized campaigns.",
       },
@@ -155,7 +161,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Sales Strategies for Emerging Markets",
-        publication: "Published in Global Sales Journal • 2022",
+        publication: "Published in Global Sales Journal",
+        year: 2022,
         about:
           "This study analyzes effective sales strategies tailored for emerging markets, with a focus on customer engagement and localized approaches.",
       },
@@ -177,7 +184,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Machine Learning Algorithms for Predictive Analytics",
-        publication: "Published in AI and Data Science Journal • 2021",
+        publication: "Published in AI and Data Science Journal ",
+        year: 2021,
         about:
           "The paper presents a comprehensive guide to machine learning algorithms that can be applied in predictive analytics across various industries.",
       },
@@ -199,7 +207,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Content Marketing Strategies for Startups",
-        publication: "Published in Startup Marketing Weekly • 2020",
+        publication: "Published in Startup Marketing Weekly",
+        year: 2020,
         about:
           "This research provides insights into content marketing strategies specifically designed to help startups build brand presence and drive growth.",
       },
@@ -221,7 +230,8 @@ const initialUsers = loadFromLocalStorage() || [
     researchPublications: [
       {
         title: "Financial Planning for Small Businesses",
-        publication: "Published in Finance Today • 2019",
+        publication: "Published in Finance Today ",
+        year: 2019,
         about:
           "This research offers practical financial planning strategies that small businesses can implement to manage resources effectively and ensure sustainability.",
       },
@@ -242,10 +252,11 @@ const initialUsers = loadFromLocalStorage() || [
     workEmail: "grace.adams@hr.com",
     researchPublications: [
       {
-        title: "The Future of HR in the Tech Industry",
-        publication: "Published in HR Magazine • 2023",
+        title: "The Future of HR in the Digital Age",
+        publication: "Published in HR Leadership Journal ",
+        year: 2023,
         about:
-          "This paper discusses emerging trends in human resources within the tech industry, with a focus on employee engagement, talent acquisition, and diversity.",
+          "This paper discusses the transformation of HR practices due to digital technologies, with a focus on automation, data-driven decision-making, and employee experience.",
       },
     ],
   },

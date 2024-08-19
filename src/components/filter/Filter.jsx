@@ -65,14 +65,14 @@ const Filter = memo(({ className = "", onClose }) => {
 
   return (
     <div
-      className={`relative shadow-md rounded bg-white border border-gray-300 p-4 flex flex-col gap-4 ${className}`}
+      className={`relative shadow-md rounded bg-white border border-gray-300 p-4 flex flex-col gap-4  w-[300px]${className}`}
     >
       <div className="flex items-center justify-between">
         <span className="font-semibold">Filters</span>
         <img
           className="w-4 h-4 cursor-pointer"
           alt="Close"
-          src="../../../public/down-arrow.png"
+          src="/public/down-arrow.png"
           onClick={onClose}
         />
       </div>
@@ -92,21 +92,27 @@ const Filter = memo(({ className = "", onClose }) => {
             className={`h-4 w-4 transform transition-transform ${
               roleHidden ? "rotate-180" : ""
             }`}
-            src="../../../public/down-arrow.png"
+            src="/public/down-arrow.png"
             alt="Toggle"
           />
         </div>
         <div
           className={`transition-all duration-300 overflow-hidden ${
-            roleHidden ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+            roleHidden ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="mt-2 flex flex-col gap-2 pl-7">
             {[
-              "Product Designer",
+              "Developer",
+              "Designer",
               "Product Manager",
-              "Frontend Developer",
-              "Backend Developer",
+              "Analyst",
+              "Marketing Manager",
+              "Sales Executive",
+              "Data Scientist",
+              "Content Writer",
+              "Finance Manager",
+              "HR Manager",
             ].map((role) => (
               <div key={role} className="flex items-center gap-2">
                 <Checkbox
@@ -140,7 +146,7 @@ const Filter = memo(({ className = "", onClose }) => {
         </div>
         <div
           className={`transition-all duration-300 overflow-hidden ${
-            teamHidden ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+            teamHidden ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="mt-2 flex flex-col gap-2 pl-7">

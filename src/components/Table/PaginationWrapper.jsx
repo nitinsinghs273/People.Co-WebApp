@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { setSearchQuery } from "../../Slices/DataSlices";
 import Filter from "../filter/Filter";
+import { useNavigate } from "react-router-dom";
 
 const PaginationWrapper = ({
   className = "",
@@ -16,6 +17,11 @@ const PaginationWrapper = ({
   const [hidden, setHidden] = useState(false);
   //Queries
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleAdding = () => {
+    navigate(`/addmember`);
+  };
 
   const handleChange = (e) => {
     dispatch(setSearchQuery(e.target.value));
@@ -103,7 +109,7 @@ const PaginationWrapper = ({
 
               <button
                 className="cursor-pointer [border:none] p-2 bg-brand-700 !m-[0] absolute top-[15px] right-[11px] rounded-medium overflow-hidden flex flex-row items-center justify-center z-[3]"
-                onClick={openEdit}
+                onClick={handleAdding}
               >
                 <div className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-center gap-[7px]">
                   <img

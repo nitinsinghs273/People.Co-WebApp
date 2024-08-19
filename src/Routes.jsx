@@ -5,6 +5,7 @@ import { Heading } from "./components";
 
 import Table from "./components/Table/Table";
 import UserDetailPage from "./pages/UserDetailPage/UserDetailPage";
+import Adding from "./pages/AddingMember/Adding";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -27,6 +28,7 @@ const ProjectRoutes = () => {
       ],
     },
     { path: "/detail/:userId", element: <UserDetailPage /> },
+    { path: "/addmember", element: <Adding /> },
 
     { path: "*", element: <NotFound /> },
   ]);

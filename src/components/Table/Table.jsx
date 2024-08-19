@@ -39,7 +39,11 @@ function Table() {
       <div className="" style={{ width: "95%" }}>
         <TableHeaderCell />
         {filteredUsers.map((item) => (
-          <TableCell key={item.id} data={item} />
+          <TableCell
+            key={item.id}
+            data={item}
+            propBackgroundColor={item.id % 2 == 0 ? "#f9fafb" : ""}
+          />
         ))}
       </div>
       <Pagination />

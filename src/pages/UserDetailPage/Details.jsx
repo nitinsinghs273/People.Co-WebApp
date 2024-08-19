@@ -81,7 +81,7 @@ const Component = memo(({ className = "", userByID }) => {
                     <div className="flex flex-row items-center justify-start text-neutral-neutral-600">
                       <div className="flex flex-row items-center justify-center">
                         <div className="relative leading-[125%]">
-                          {research.publication}
+                          {research.publication} • {research.year}
                         </div>
                       </div>
                     </div>
