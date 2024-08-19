@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
 
 // Function to load users from local storage
 export const loadFromLocalStorage = () => {
@@ -22,7 +21,6 @@ export const saveToLocalStorage = (users) => {
   }
 };
 
-// Initial users data
 const initialUsers = loadFromLocalStorage() || [
   {
     id: 1,
@@ -305,29 +303,6 @@ export const {
   setSearchQuery,
   setFilterCriteria,
 } = dataSlice.actions;
-
-export const selectFilteredUsers = (state) => {
-  const { searchQuery, filterCriteria } = state.data;
-  const { roles, teams } = filterCriteria;
-
-  return state.data.users.filter((user) => {
-    // Search filter
-    const matchesSearch =
-      searchQuery === "" ||
-      user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      user.email.toLowerCase().includes(searchQuery.toLowerCase());
-
-    // Role filter
-    const matchesRole =
-      roles.length === 0 || roles.includes(user.role.toLowerCase());
-
-    // Teams filter
-    const matchesTeams =
-      teams.length === 0 || teams.every((team) => user.teams.includes(team));
-
-    return matchesSearch && matchesRole && matchesTeams;
-  });
-};
 
 // Load users from local storage initially
 saveToLocalStorage(initialUsers);

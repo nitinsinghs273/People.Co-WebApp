@@ -1,14 +1,10 @@
-import { useState, useMemo, useCallback } from "react";
+import { useMemo } from "react";
 
 import PropTypes from "prop-types";
-import { deleteUser } from "../../Slices/DataSlices";
-import { useSelector, useDispatch } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 
 const UserTableCell = ({ data, className = "", propBackgroundColor }) => {
-  const [isEditOpen, setEditOpen] = useState(false);
-  const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
   const handleCellClick = (id) => {
@@ -20,20 +16,6 @@ const UserTableCell = ({ data, className = "", propBackgroundColor }) => {
       backgroundColor: propBackgroundColor,
     };
   }, [propBackgroundColor]);
-
-  //Delete Button and Edit button
-  const handleDeleteUser = (id) => {
-    console.log(id);
-    dispatch(deleteUser(id));
-  };
-
-  const openEdit = useCallback(() => {
-    setEditOpen(true);
-  }, []);
-
-  const closeEdit = useCallback(() => {
-    setEditOpen(false);
-  }, []);
 
   return (
     <>

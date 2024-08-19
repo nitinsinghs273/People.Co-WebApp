@@ -7,12 +7,11 @@ import UserTable from "./UserTable";
 import { useSelector } from "react-redux";
 
 function UserDetailPage() {
-  const { userId } = useParams();
-  console.log(userId);
-  // const { users } = useSelector((state) => state.data);
-  // const userByID = users.filter((user) => user.id === userId);
-  // console.log(userByID);
+  const { userId } = useParams(); // userId is a string from useParams
+  const { users } = useSelector((state) => state.data);
 
+  // Ensure data types match when comparing IDs
+  const userByID = users.find((user) => user.id === parseInt(userId, 10));
   return (
     <div className=" relative bg-primary-primary-50 overflow-y-auto flex flex-col items-start justify-start pt-[17px] px-0 pb-0 box-border leading-[normal] tracking-[normal] text-left text-sm text-neutral-neutral-900 font-text-sm-semibold ">
       <Header />
@@ -27,7 +26,7 @@ function UserDetailPage() {
           >
             <div className="flex justify-between gap-5">
               <UserTable />
-              <UserPanel />
+              <UserPanel userByID={userByID} />
             </div>
           </div>
         </section>

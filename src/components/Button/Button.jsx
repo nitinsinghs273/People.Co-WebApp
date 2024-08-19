@@ -9,6 +9,7 @@ const Button = ({
   propFlex,
   propColor,
   propMinWidth,
+  onHandleSelect,
 }) => {
   const buttonStyle = useMemo(() => {
     return {
@@ -29,6 +30,7 @@ const Button = ({
     <button
       className={`cursor-pointer [border:none] py-[11.5px] px-[11px] bg-neutral-neutral-100 rounded-medium overflow-hidden flex flex-row items-center justify-center ${className}`}
       style={buttonStyle}
+      onClick={onHandleSelect}
     >
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-row items-center justify-center">

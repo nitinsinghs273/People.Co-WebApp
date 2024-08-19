@@ -4,16 +4,8 @@ import UserTableHeader from "./UserTableHeader";
 import PaginationWrapper from "../../components/Table/PaginationWrapper";
 import UserTableCell from "./UserTableCell";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setUsers,
-  addUser,
-  updateUser,
-  deleteUser,
-  setSearchQuery,
-} from "../../Slices/DataSlices";
 
 function UserTable() {
-  const dispatch = useDispatch();
   const { users, searchQuery } = useSelector((state) => state.data);
   const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(searchQuery.toLowerCase())

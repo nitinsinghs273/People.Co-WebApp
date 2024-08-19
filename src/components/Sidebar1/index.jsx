@@ -1,17 +1,9 @@
-import { Img } from "./..";
 import React, { useState } from "react";
-import { MenuItem, Menu, Sidebar } from "react-pro-sidebar";
+import { Menu, Sidebar } from "react-pro-sidebar";
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar1({ ...props }) {
-  const [collapsed, setCollapsed] = React.useState(false);
-  const [isActive1, setIsActive1] = useState(false);
-  const [isActive2, setIsActive2] = useState(false);
-
-  //use this function to collapse/expand the sidebar
-  //function collapseSidebar() {
-  //    setCollapsed(!collapsed)
-  //}
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <Sidebar
@@ -37,56 +29,55 @@ export default function Sidebar1({ ...props }) {
         rootStyles={{ ["&>ul"]: { gap: "8px" } }}
         className="flex w-full flex-col self-stretch"
       >
-        <NavLink to="/" className={({ isActive }) => setIsActive1(isActive)}>
-          <div className="flex-1 flex flex-col items-start justify-start z-[1]">
-            <div className="self-stretch rounded bg-base-white overflow-hidden flex flex-col items-start justify-start p-2">
-              <div className="flex flex-row items-center justify-start gap-2">
-                {isActive1 ? (
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          {({ isActive }) => (
+            <div className="flex-1 flex flex-col items-start justify-start z-[1]">
+              <div className="self-stretch rounded bg-base-white overflow-hidden flex flex-col items-start justify-start p-2">
+                <div className="flex flex-row items-center justify-start gap-2">
                   <img
                     className="h-6 w-6 relative rounded overflow-hidden shrink-0"
                     alt=""
-                    src="../../../public/frame-513-1.svg"
+                    src={
+                      isActive
+                        ? "../../../public/frame-513-1.svg"
+                        : "../../../public/frame-513.svg"
+                    }
                   />
-                ) : (
-                  <img
-                    className="h-6 w-6 relative rounded overflow-hidden shrink-0"
-                    alt=""
-                    src="../../../public/frame-513.svg"
-                  />
-                )}
-                <div className="relative leading-[125%] font-semibold inline-block min-w-[74px]">
-                  Overview
+                  <div className="relative leading-[125%] font-semibold inline-block min-w-[74px]">
+                    Overview
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </NavLink>
         <NavLink
           to="/directory"
-          className={({ isActive }) => setIsActive2(isActive)}
+          className={({ isActive }) => (isActive ? "active" : "")}
         >
-          <div className="flex-1 flex flex-col items-start justify-start z-[1]">
-            <div className="self-stretch rounded bg-base-white overflow-hidden flex flex-col items-start justify-start p-2">
-              <div className="flex flex-row items-center justify-start gap-2">
-                {isActive2 ? (
+          {({ isActive }) => (
+            <div className="flex-1 flex flex-col items-start justify-start z-[1]">
+              <div className="self-stretch rounded bg-base-white overflow-hidden flex flex-col items-start justify-start p-2">
+                <div className="flex flex-row items-center justify-start gap-2">
                   <img
                     className="h-6 w-6 relative rounded overflow-hidden shrink-0"
                     alt=""
-                    src="../../../public/frame-513-1.svg"
+                    src={
+                      isActive
+                        ? "../../../public/frame-513-1.svg"
+                        : "../../../public/frame-513.svg"
+                    }
                   />
-                ) : (
-                  <img
-                    className="h-6 w-6 relative rounded overflow-hidden shrink-0"
-                    alt=""
-                    src="../../../public/frame-513.svg"
-                  />
-                )}
-                <div className="relative leading-[125%] font-semibold inline-block min-w-[74px] ">
-                  People Directory
+                  <div className="relative leading-[125%] font-semibold inline-block min-w-[74px] ">
+                    People Directory
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </NavLink>
       </Menu>
     </Sidebar>

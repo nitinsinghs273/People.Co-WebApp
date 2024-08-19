@@ -3,7 +3,7 @@ import Edit from "../Edit";
 import PortalPopup from "../PortalPopup";
 import PropTypes from "prop-types";
 import { deleteUser } from "../../Slices/DataSlices";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const TableCell = ({ data, className = "", propBackgroundColor }) => {
@@ -39,7 +39,7 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
   return (
     <>
       <div
-        className={`flex flex-row items-center justify-between w-full border-l-0 border-r-0  border-b-[1px] border-t-0  border-gray-200 border-solid ${className}`}
+        className={`flex flex-row items-center justify-between w-full border-l-0 border-r-0 border-b-1 border-t-0  border-gray-200 border-solid ${className}`}
         style={tableCellStyle}
       >
         <section
@@ -49,7 +49,7 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
         >
           <div
             className="h-10 w-10 rounded-full bg-gray-300 bg-cover"
-            style={{ backgroundImage: "url('../../../public/avatar9@3x.png')" }}
+            style={{ backgroundImage: "url('/avatar9@3x.png')" }}
           />
 
           <div className="text-gray-600 min-w-[48px]" style={{ width: "80%" }}>
@@ -68,7 +68,7 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
                 className="h-2 w-2 relative"
                 loading="lazy"
                 alt=""
-                src="../../../public/-dot.svg"
+                src="/-dot.svg"
               />
               <div className="relative leading-[18px] font-medium inline-block min-w-[37px]">
                 {data.status}
@@ -130,16 +130,12 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
             <img
               className="h-5 w-5"
               alt="Trash"
-              src="../../../public/trash01.svg"
+              src="/trash01.svg"
               onClick={() => handleDeleteUser(data.id)} // Ensure the ID is passed here
             />
           </div>
           <div className="p-2.5 cursor-pointer" onClick={openEdit}>
-            <img
-              className="h-5 w-5"
-              alt="Edit"
-              src="../../../public/edit01.svg"
-            />
+            <img className="h-5 w-5" alt="Edit" src="/edit01.svg" />
           </div>
         </div>
       </div>

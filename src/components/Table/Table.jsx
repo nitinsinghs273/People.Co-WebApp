@@ -4,26 +4,35 @@ import TableHeaderCell from "./TableHeaderCell";
 import PaginationWrapper from "./PaginationWrapper";
 import TableCell from "./TableCell";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setUsers,
-  addUser,
-  updateUser,
-  deleteUser,
-  setSearchQuery,
-} from "../../Slices/DataSlices";
 
 function Table() {
   const dispatch = useDispatch();
   const { users, searchQuery, filterCriteria } = useSelector(
     (state) => state.data
   );
-  const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+
+  const filteredUsers = users
+    .filter(
+      (user) =>
+        user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        user.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        user.status.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .filter(
+      (user) =>
+        filterCriteria.roles.length === 0 ||
+        filterCriteria.roles.includes(user.role)
+    )
+    .filter(
+      (user) =>
+        filterCriteria.teams.length === 0 ||
+        filterCriteria.teams.every((team) => user.teams.includes(team))
+    );
+
   return (
     <div style={{ width: "100%" }}>
       <PaginationWrapper
-        divider="../../../public/divider.svg"
+        divider="/divider.svg"
         Number_of_data={filteredUsers.length}
         nosearch={true}
       />

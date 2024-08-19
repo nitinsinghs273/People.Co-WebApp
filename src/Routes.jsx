@@ -2,7 +2,7 @@ import { useRoutes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Applayout from "./pages/MembersPage/Applayout";
 import { Heading } from "./components";
-import ContainerBox from "./components/ContainerBox/ContainerBox";
+
 import Table from "./components/Table/Table";
 import UserDetailPage from "./pages/UserDetailPage/UserDetailPage";
 
@@ -26,7 +26,7 @@ const ProjectRoutes = () => {
         { path: "/directory", element: <Table /> },
       ],
     },
-    { path: "/detail/:id", element: <UserDetailPage /> },
+    { path: "/detail/:userId", element: <UserDetailPage /> },
 
     { path: "*", element: <NotFound /> },
   ]);

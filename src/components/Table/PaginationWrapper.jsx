@@ -3,19 +3,12 @@ import Edit from "../Edit";
 import PortalPopup from "../PortalPopup";
 import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setUsers,
-  addUser,
-  updateUser,
-  deleteUser,
-  setSearchQuery,
-} from "../../Slices/DataSlices";
+import { setSearchQuery } from "../../Slices/DataSlices";
 import Filter from "../filter/filter";
 
 const PaginationWrapper = ({
   className = "",
   propTextDecoration,
-  divider,
   Number_of_data,
   nosearch,
 }) => {
@@ -23,7 +16,6 @@ const PaginationWrapper = ({
   const [hidden, setHidden] = useState(false);
   //Queries
   const dispatch = useDispatch();
-  const { users, searchQuery } = useSelector((state) => state.data);
 
   const handleChange = (e) => {
     dispatch(setSearchQuery(e.target.value));
@@ -113,18 +105,18 @@ const PaginationWrapper = ({
                 className="cursor-pointer [border:none] p-2 bg-brand-700 !m-[0] absolute top-[15px] right-[11px] rounded-medium overflow-hidden flex flex-row items-center justify-center z-[3]"
                 onClick={openEdit}
               >
-                <button className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-center gap-[7px]">
+                <div className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-center gap-[7px]">
                   <img
                     className="h-5 w-5 relative min-h-[20px]"
                     alt=""
                     src="../../../public/icon.svg"
                   />
                   <div className="flex flex-row items-center justify-center">
-                    <b className="relative text-sm tracking-[0.08em] leading-[120%] uppercase inline-block font-text-sm-semibold text-base-white text-left min-w-[107px]">
+                    <a className="relative text-sm tracking-[0.08em] leading-[120%] uppercase inline-block font-text-sm-semibold text-base-white text-left min-w-[107px]">
                       Add Member
-                    </b>
+                    </a>
                   </div>
-                </button>
+                </div>
               </button>
             </div>
           )}
@@ -148,7 +140,7 @@ const PaginationWrapper = ({
             onOutsideClick={handleFilterPopup}
           >
             {" "}
-            <Filter />
+            <Filter onClose={handleFilterPopup} />
           </PortalPopup>
         </div>
       )}
