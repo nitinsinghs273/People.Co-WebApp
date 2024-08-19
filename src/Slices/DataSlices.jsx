@@ -23,7 +23,7 @@ export const saveToLocalStorage = (users) => {
 
 const initialUsers = loadFromLocalStorage() || [
   {
-    id: 1,
+    id: "1",
     name: "Olivia Rhye",
     username: "@olivia",
     email: "olivia.rhye@example.com",
@@ -54,7 +54,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 2,
+    id: "2",
     name: "John Doe",
     username: "@john",
     email: "john.doe@example.com",
@@ -77,7 +77,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 3,
+    id: "3",
     name: "Jane Smith",
     username: "@jane",
     email: "jane.smith@example.com",
@@ -100,7 +100,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 4,
+    id: "4",
     name: "Alice Johnson",
     username: "@alice",
     email: "alice.johnson@example.com",
@@ -123,7 +123,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 5,
+    id: "5",
     name: "Bob Brown",
     username: "@bob",
     email: "bob.brown@example.com",
@@ -146,7 +146,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 6,
+    id: "6",
     name: "Charlie White",
     username: "@charlie",
     email: "charlie.white@example.com",
@@ -169,7 +169,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 7,
+    id: "7",
     name: "David Green",
     username: "@david",
     email: "david.green@example.com",
@@ -192,7 +192,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 8,
+    id: "8",
     name: "Emily Clark",
     username: "@emily",
     email: "emily.clark@example.com",
@@ -215,7 +215,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 9,
+    id: "9",
     name: "Frank Martin",
     username: "@frank",
     email: "frank.martin@example.com",
@@ -238,7 +238,7 @@ const initialUsers = loadFromLocalStorage() || [
     ],
   },
   {
-    id: 10,
+    id: "10",
     name: "Grace Adams",
     username: "@grace",
     email: "grace.adams@example.com",

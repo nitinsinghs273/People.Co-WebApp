@@ -5,9 +5,11 @@ import PropTypes from "prop-types";
 import { deleteUser } from "../../Slices/DataSlices";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import DeleteDialog from "../Dialog/DeleteDialog";
 
 const TableCell = ({ data, className = "", propBackgroundColor }) => {
   const [isEditOpen, setEditOpen] = useState(false);
+  const [isDelete, setIsDelete] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -22,8 +24,8 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
   }, [propBackgroundColor]);
 
   const handleDeleteUser = (id) => {
-    console.log(id);
     dispatch(deleteUser(id));
+    setIsDelete(false);
   };
 
   const openEdit = useCallback(() => {
@@ -32,6 +34,12 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
 
   const closeEdit = useCallback(() => {
     setEditOpen(false);
+  }, []);
+  const OpenDelete = useCallback(() => {
+    setIsDelete(true);
+  }, []);
+  const CloseDelete = useCallback(() => {
+    setIsDelete(false);
   }, []);
 
   return (
@@ -128,7 +136,7 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
               className="h-5 w-5"
               alt="Trash"
               src="/trash01.svg"
-              onClick={() => handleDeleteUser(data.id)}
+              onClick={OpenDelete}
             />
           </div>
           <div className="p-2.5 cursor-pointer" onClick={openEdit}>
@@ -143,6 +151,19 @@ const TableCell = ({ data, className = "", propBackgroundColor }) => {
           onOutsideClick={closeEdit}
         >
           <Edit onClose={closeEdit} user={data} />
+        </PortalPopup>
+      )}
+      {isDelete && (
+        <PortalPopup
+          overlayColor="rgba(239, 237, 237, .89)"
+          placement="Centered"
+          onOutsideClick={CloseDelete}
+        >
+          <DeleteDialog
+            setIsDelete={setIsDelete}
+            data={data}
+            handleDeleteUser={handleDeleteUser}
+          />
         </PortalPopup>
       )}
     </>

@@ -79,7 +79,7 @@ const Edit = ({ className = "", onClose, user }) => {
             <div
               className="h-[100px] w-[100px] rounded-181xl flex flex-row items-start justify-start bg-cover bg-no-repeat bg-[top]"
               style={{
-                backgroundImage: `url(${photo || "/default-avatar.png"})`,
+                backgroundImage: `url(${photo || "/avatar9@3x.png"})`,
               }}
             />
           </div>

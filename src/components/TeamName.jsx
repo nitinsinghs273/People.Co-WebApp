@@ -23,7 +23,7 @@ const TeamName = ({ className = "" }) => {
                       className="w-4 h-4 relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
-                      src="../../../public/icons--lucide-2.svg"
+                      src="/icons--lucide-2.svg"
                     />
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const TeamName = ({ className = "" }) => {
                         className="w-4 h-4 relative overflow-hidden shrink-0"
                         loading="lazy"
                         alt=""
-                        src="../../../public/icons--lucide-2.svg"
+                        src="/public/icons--lucide-2.svg"
                       />
                     </div>
                   </div>
@@ -73,7 +73,7 @@ const TeamName = ({ className = "" }) => {
                     className="w-6 h-6 relative overflow-hidden shrink-0 z-[1]"
                     loading="lazy"
                     alt=""
-                    src="../../../public/icons--lucide-6.svg"
+                    src="/public/icons--lucide-6.svg"
                   />
                 </div>
               </div>
@@ -83,7 +83,7 @@ const TeamName = ({ className = "" }) => {
                   className="w-6 h-6 relative overflow-hidden shrink-0 z-[1]"
                   loading="lazy"
                   alt=""
-                  src="../../../public/icon-end-1-medium-2.svg"
+                  src="/icon-end-1-medium-2.svg"
                 />
               </div>
             </div>
@@ -93,24 +93,10 @@ const TeamName = ({ className = "" }) => {
             <img
               className="h-6 w-6 relative hidden"
               alt=""
-              src="../../../public/placeholder1.svg"
+              src="/placeholder1.svg"
             />
           </div>
           <div className="self-stretch h-px relative border-neutral-neutral-600 border-t-[1px] border-solid box-border shrink-0" />
-        </div>
-        <div className="hidden flex-col items-start justify-start text-neutral-neutral-900">
-          <div className="w-[312px] bg-base-white border-neutral-neutral-300 border-r-[1px] border-solid border-neutral-neutral-300 border-l-[1px] border-solid box-border overflow-hidden flex flex-row items-center justify-start py-2 pl-5 pr-0 whitespace-nowrap">
-            <div className="relative leading-[125%]">Option item</div>
-          </div>
-          <div className="w-[312px] bg-base-white border-neutral-neutral-300 border-r-[1px] border-solid border-neutral-neutral-300 border-l-[1px] border-solid box-border overflow-hidden flex flex-row items-center justify-start py-2 pl-5 pr-0 whitespace-nowrap">
-            <div className="relative leading-[125%]">Option item</div>
-          </div>
-          <div className="w-[312px] bg-base-white border-neutral-neutral-300 border-r-[1px] border-solid border-neutral-neutral-300 border-l-[1px] border-solid box-border overflow-hidden flex flex-row items-center justify-start py-2 pl-5 pr-0 whitespace-nowrap">
-            <div className="relative leading-[125%]">Option item</div>
-          </div>
-          <div className="w-[312px] rounded-t-none rounded-b bg-base-white border-neutral-neutral-300 border-r-[1px] border-solid border-neutral-neutral-300 border-b-[1px] border-solid border-neutral-neutral-300 border-l-[1px] border-solid box-border overflow-hidden flex flex-row items-center justify-start pt-2 pb-1.5 pl-5 pr-0 whitespace-nowrap">
-            <div className="relative leading-[125%]">Option item</div>
-          </div>
         </div>
       </footer>
     </div>

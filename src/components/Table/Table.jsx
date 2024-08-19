@@ -42,7 +42,7 @@ function Table() {
           <TableCell
             key={item.id}
             data={item}
-            propBackgroundColor={item.id % 2 == 0 ? "#f9fafb" : ""}
+            propBackgroundColor={parseInt(item.id) % 2 == 0 ? "#f9fafb" : ""}
           />
         ))}
       </div>

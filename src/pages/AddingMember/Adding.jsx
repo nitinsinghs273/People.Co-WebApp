@@ -85,7 +85,11 @@ function Adding() {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    const newUser = { ...formData, id: users.length, teams: tagData };
+    const newUser = {
+      ...formData,
+      id: toString(users.length),
+      teams: tagData,
+    };
     if (isAnyFieldEmpty(newUser)) return;
     console.log(newUser);
     dispatch(addUser(newUser));
