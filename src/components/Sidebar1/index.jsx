@@ -42,8 +42,8 @@ export default function Sidebar1({ ...props }) {
                     alt=""
                     src={
                       isActive
-                        ? "../../../public/frame-513-1.svg"
-                        : "../../../public/frame-513.svg"
+                        ? "/public/frame-513-1.svg"
+                        : "/public/frame-513.svg"
                     }
                   />
                   <div className="relative leading-[125%] font-semibold inline-block min-w-[74px]">
@@ -67,8 +67,8 @@ export default function Sidebar1({ ...props }) {
                     alt=""
                     src={
                       isActive
-                        ? "../../../public/frame-513-1.svg"
-                        : "../../../public/frame-513.svg"
+                        ? "/public/frame-513-1.svg"
+                        : "/public/frame-513.svg"
                     }
                   />
                   <div className="relative leading-[125%] font-semibold inline-block min-w-[74px] ">

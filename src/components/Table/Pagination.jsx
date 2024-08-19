@@ -12,7 +12,7 @@ const Pagination = ({ className = "" }) => {
               <img
                 className="h-5 w-5 relative overflow-hidden shrink-0 min-h-[20px]"
                 alt=""
-                src="../../../public/arrowleft.svg"
+                src="/public/arrowleft.svg"
               />
               <div className="flex flex-row items-center justify-center py-0 px-0.5">
                 <div className="relative text-sm leading-[20px] font-semibold font-text-sm-semibold text-gray-700 text-left inline-block min-w-[59px]">
@@ -79,7 +79,7 @@ const Pagination = ({ className = "" }) => {
               <img
                 className="h-5 w-5 relative overflow-hidden shrink-0 min-h-[20px]"
                 alt=""
-                src="../../../public/arrowright.svg"
+                src="/public/arrowright.svg"
               />
             </button>
           </div>

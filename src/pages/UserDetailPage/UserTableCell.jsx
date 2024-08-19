@@ -46,7 +46,7 @@ const UserTableCell = ({ data, className = "", propBackgroundColor }) => {
                 className="h-2 w-2 relative"
                 loading="lazy"
                 alt=""
-                src="../../../public/-dot.svg"
+                src="/-dot.svg"
               />
               <div className="relative leading-[18px] font-medium inline-block min-w-[37px]">
                 {data.status}

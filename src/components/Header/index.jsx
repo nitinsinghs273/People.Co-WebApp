@@ -24,7 +24,7 @@ const Header = ({ className = "" }) => {
               className="h-9 w-9 relative rounded-[50%] object-cover min-h-[36px]"
               loading="lazy"
               alt=""
-              src="../../../public/ellipse-211@2x.png"
+              src="/public/ellipse-211@2x.png"
             />
             <div className="flex flex-col items-start justify-start pt-2 px-0 pb-0 text-base text-neutral-neutral-900 font-text-sm-semibold">
               <div className="relative leading-[125%] inline-block min-w-[72px]">

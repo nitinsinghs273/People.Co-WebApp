@@ -9,7 +9,7 @@ const Bell = ({ className = "" }) => {
         className="h-5 w-5 relative overflow-hidden shrink-0"
         loading="lazy"
         alt=""
-        src="../../../public/iconoutlinebell.svg"
+        src="/public/iconoutlinebell.svg"
       />
       <div className="h-[18px] w-[14.2px] relative hidden">
         <div className="absolute h-[78.89%] w-full top-[4.44%] right-[0%] bottom-[16.67%] left-[0%] rounded-[50%] bg-indigo-600" />
