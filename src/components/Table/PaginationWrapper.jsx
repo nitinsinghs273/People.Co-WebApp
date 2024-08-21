@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import Edit from "../Edit";
+import Edit from "../Edit/Edit";
 import PortalPopup from "../PortalPopup";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";

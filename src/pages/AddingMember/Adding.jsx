@@ -9,6 +9,7 @@ function Adding() {
   const [tagData, setTagData] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
+    username: "",
     email: "",
     mobile: "",
     dateOfBirth: "",
@@ -87,14 +88,16 @@ function Adding() {
     e.preventDefault();
     const newUser = {
       ...formData,
-      id: toString(users.length),
+      id: toString(users.length + 1),
       teams: tagData,
+      username: `@` + formData.name,
     };
     if (isAnyFieldEmpty(newUser)) return;
     console.log(newUser);
     dispatch(addUser(newUser));
     navigate("/directory"); // Navigate to the directory after submission
   };
+
   const handleBack = (e) => {
     e.preventDefault();
     navigate("/directory");
@@ -222,6 +225,7 @@ function Adding() {
               <option value="Active">Active</option>
               <option value="Inactive">Inactive</option>
               <option value="Pending">Pending</option>
+              <option value="Suspended">Suspended</option>
               {/* Add more status options as needed */}
             </select>
           </div>
@@ -262,11 +266,8 @@ function Adding() {
           </div>
         </div>
 
-        <div className="mb-4 flex flex-col">
-          <label htmlFor="teams" className="text-sm font-medium mb-1">
-            Teams
-          </label>
-          <div className="flex items-start justify-start bg-primary-primary-50 border-neutral-neutral-300 border-[1px] border-solid px-3">
+        <div className="mb-2 flex flex-col">
+          <div>
             <TagsInput tagData={tagData} setTagData={setTagData} />
           </div>
         </div>

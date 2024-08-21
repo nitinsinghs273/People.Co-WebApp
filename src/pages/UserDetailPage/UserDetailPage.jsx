@@ -11,7 +11,7 @@ function UserDetailPage() {
   const { users } = useSelector((state) => state.data);
 
   // Ensure data types match when comparing IDs
-  const userByID = users.find((user) => user.id === parseInt(userId, 10));
+  const userByID = users.find((user) => user.id === userId, 10);
   return (
     <div className=" relative bg-primary-primary-50 overflow-y-auto flex flex-col items-start justify-start pt-[17px] px-0 pb-0 box-border leading-[normal] tracking-[normal] text-left text-sm text-neutral-neutral-900 font-text-sm-semibold ">
       <Header />

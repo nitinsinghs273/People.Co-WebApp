@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import Select from "./Select";
+import Status from "./Status";
 import Role from "./Role";
 import { useState } from "react";
 
-const RoleInput = ({ className = "" }) => {
+const RoleInput = ({ className = "", role, status, setRole, setStatus }) => {
   const [icon, setIcon] = useState(true);
   return (
     <div
@@ -31,7 +31,7 @@ const RoleInput = ({ className = "" }) => {
                   />
                 )}
                 <div className="relative leading-[125%] inline-block min-w-[48px]">
-                  <Select />
+                  <Status status={status} setStatus={setStatus} />
                 </div>
               </div>
               {icon && (
@@ -64,7 +64,7 @@ const RoleInput = ({ className = "" }) => {
                   />
                 )}
                 <div className="relative leading-[125%] inline-block min-w-[48px]">
-                  <Role />
+                  <Role role={role} setRole={setRole} />
                 </div>
               </div>
               {icon && (

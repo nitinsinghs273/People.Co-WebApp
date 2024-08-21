@@ -2,13 +2,7 @@ import PropTypes from "prop-types";
 
 const EmailInput = ({ name, email, setName, setEmail, className = "" }) => {
   // Local state management for input fields
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-  // Handling change in email input
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+
   return (
     <div
       className={`self-stretch flex flex-row items-start justify-start py-0 px-0.5 box-border max-w-full text-left text-base text-neutral-neutral-900 font-text-sm-semibold ${className}`}
@@ -34,7 +28,7 @@ const EmailInput = ({ name, email, setName, setEmail, className = "" }) => {
                       type="text"
                       placeholder="name"
                       value={name}
-                      onChange={handleNameChange}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                 </div>
@@ -68,7 +62,7 @@ const EmailInput = ({ name, email, setName, setEmail, className = "" }) => {
                       className="w-full[border:none] [outline:none] bg-[transparent] flex flex-row items-start justify-start box-border font-text-sm-semibold text-base text-neutral-neutral-700"
                       placeholder="email"
                       value={email}
-                      onChange={handleEmailChange}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>

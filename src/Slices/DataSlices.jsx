@@ -285,12 +285,24 @@ const dataSlice = createSlice({
       saveToLocalStorage(state.users); // Save to local storage
     },
     updateUser(state, action) {
-      const index = state.users.findIndex(
-        (user) => user.id === action.payload.id
-      );
+      const { id, ...updatedFields } = action.payload;
+      const index = state.users.findIndex((user) => user.id === id);
+
       if (index !== -1) {
-        state.users[index] = action.payload;
-        saveToLocalStorage(state.users); // Save to local storage
+        const existingUser = state.users[index];
+
+        // Only update fields that have actually changed
+        const updatedUser = {
+          ...existingUser,
+          ...Object.fromEntries(
+            Object.entries(updatedFields).filter(
+              ([key, value]) => existingUser[key] !== value
+            )
+          ),
+        };
+
+        state.users[index] = updatedUser;
+        saveToLocalStorage(state.users); // Save the updated users array to local storage
       }
     },
     deleteUser(state, action) {

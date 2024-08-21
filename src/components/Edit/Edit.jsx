@@ -1,34 +1,25 @@
 import { useState } from "react";
 import EmailInput from "./EmailInput";
 import RoleInput from "./RoleInput";
-import TeamName from "./TeamName";
-import FooterWithDivider from "./FooterWithDivider";
+import FooterWithDivider from "../FooterWithDivider";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { updateUser } from "../Slices/DataSlices";
+import { updateUser } from "../../Slices/DataSlices";
+import TagsInput from "../TagsInput/TagsInput";
 
 const Edit = ({ className = "", onClose, user }) => {
   const dispatch = useDispatch();
 
-  // Local state management for input fields
+  // Combined state for all form fields
+  const [photo, setPhoto] = useState("");
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
   const [role, setRole] = useState(user.role);
-  const [teams, setTeams] = useState(user.teams);
-  const [photo, setPhoto] = useState(user.photo);
+
   const [status, setStatus] = useState(user.status);
-
-  // Handling change in role input
-  const handleRoleChange = (e) => {
-    setRole(e.target.value);
-  };
-
-  // Handling change in teams input
-  const handleTeamsChange = (newTeams) => {
-    setTeams(newTeams);
-  };
-
-  const handleStatusChange = () => {};
+  const [formData, setFormData] = useState({
+    teams: user.teams,
+  });
 
   // Handling file upload for changing photo
   const handlePhotoChange = (e) => {
@@ -54,12 +45,15 @@ const Edit = ({ className = "", onClose, user }) => {
     dispatch(
       updateUser({
         id: user.id,
+        name,
         email,
         role,
-        teams,
-        photo,
+        status,
+        ...formData,
+        teams: [...formData.teams], // Ensure teams is correctly spread
       })
     );
+
     onClose(); // Close the modal after saving
   };
 
@@ -68,10 +62,7 @@ const Edit = ({ className = "", onClose, user }) => {
       className={`relative shadow-[0px_32px_64px_rgba(0,_0,_0,_0.24),_0px_0px_8px_rgba(0,_0,_0,_0.2)] rounded-lg bg-base-white border-neutral-stroke-transparent-rest border-[1px] border-solid box-border overflow-auto flex flex-col items-start justify-start py-[22px] px-0 gap-[41px] leading-[normal] tracking-[normal] max-w-full max-h-full mq450:gap-5 ${className}`}
     >
       <section className="w-[704px] flex flex-row items-start justify-start py-0 px-6 box-border max-w-full">
-        <form
-          className="m-0 flex-1 flex flex-col items-start justify-start gap-[23.6px] max-w-full"
-          onSubmit={handleSubmit}
-        >
+        <div className="m-0 flex-1 flex flex-col items-start justify-start gap-[23.6px] max-w-full">
           <a className="[text-decoration:none] self-stretch relative text-5xl font-bold font-text-sm-semibold text-neutral-neutral-900 text-left mq450:text-[19px]">
             Edit Profile
           </a>
@@ -131,37 +122,36 @@ const Edit = ({ className = "", onClose, user }) => {
             </div>
           </div>
 
+          {/* Email Input */}
           <EmailInput
             name={name}
             email={email}
             setName={setName}
             setEmail={setEmail}
           />
-          {/* Email Input */}
 
           {/* Role Input */}
-          <RoleInput role={role} status={status} />
+          <RoleInput
+            role={role}
+            status={status}
+            setRole={setRole}
+            setStatus={setStatus}
+          />
 
           {/* Team Name Input */}
-          <TeamName value={teams} onChange={handleTeamsChange} />
+          <TagsInput
+            tagData={formData.teams}
+            setTagData={(teams) =>
+              setFormData((prevData) => ({
+                ...prevData,
+                teams,
+              }))
+            }
+          />
 
           {/* Footer with Save Button */}
-          <FooterWithDivider>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded"
-            >
-              Save Changes
-            </button>
-            <button
-              type="button"
-              className="bg-gray-300 text-gray-700 py-2 px-4 rounded"
-              onClick={onClose}
-            >
-              Cancel
-            </button>
-          </FooterWithDivider>
-        </form>
+          <FooterWithDivider handlesubmit={handleSubmit} onClose={onClose} />
+        </div>
       </section>
     </div>
   );
